@@ -23,6 +23,11 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
 
+  <!-- README.md lives at the repo root, two levels above the csproj -->
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Mapture" Version="1.0.0" />
     <PackageReference Include="Mapture.Extensions.DependencyInjection" Version="1.0.0" />
