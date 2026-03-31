@@ -1,0 +1,25 @@
+## .NET / Rider / VS
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.idea/
+*.DotSettings.user
+
+## Build / publish artifacts
+BenchmarkDotNet.Artifacts/
+publish/
+artifacts/
+nupkgs/
+*.nupkg
+*.snupkg
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Secrets / env
+.env
+*.pfx
+*.p12

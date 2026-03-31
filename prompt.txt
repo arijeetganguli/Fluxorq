@@ -1,0 +1,225 @@
+You are a senior .NET architect, open source maintainer, and software compliance expert.
+
+Build a production ready open source .NET library named **Fluxorq**.
+
+## Objective
+
+Fluxorq is a high performance request dispatching and pipeline framework inspired by common mediator patterns, with first class object mapping powered by Mapture.
+
+It must provide a familiar developer experience for users of MediatR and eliminate the need for AutoMapper, while being an original implementation with no legal or licensing risks.
+
+---
+
+## Critical Legal and Compliance Requirements
+
+You MUST follow these strictly:
+
+* Do NOT copy any code from MediatR, AutoMapper, or any other library
+* Do NOT replicate internal implementation details from existing libraries
+* Implement all functionality from first principles
+* Use only publicly understood architectural patterns such as mediator and middleware
+* Ensure all APIs, naming, and structure are original and not derivative
+* Avoid trademark conflicts in naming or namespaces
+* Ensure the library is safe for commercial use under MIT license
+
+---
+
+## Clean Code Requirements
+
+All code must strictly follow:
+
+### Design Principles
+
+* SOLID principles
+* Separation of concerns
+* Single responsibility per class
+* Explicit dependencies, no hidden magic
+* Minimal and intuitive API surface
+
+### Code Quality
+
+* Clear, self explanatory naming
+* No unnecessary abstractions
+* No dead code
+* No large classes or methods
+* Consistent formatting
+
+### Maintainability
+
+* High readability
+* Easy debugging
+* Predictable execution flow
+* Strong typing, avoid dynamic patterns
+
+---
+
+## Core Architecture
+
+### 1. Contracts
+
+Define original interfaces inspired by mediator pattern:
+
+* IRequest<TResponse>
+* IRequestHandler<TRequest, TResponse>
+* IDispatcher
+* IPipelineBehavior<TRequest, TResponse>
+
+These must be designed independently and not copied.
+
+---
+
+### 2. Dispatcher
+
+Implement a Dispatcher:
+
+* Handles request routing to correct handler
+* Supports async execution
+* Uses dependency injection
+* Uses safe caching for handler resolution
+* Avoid reflection heavy logic where possible
+
+---
+
+### 3. Pipeline System
+
+Implement middleware style pipeline:
+
+* Ordered execution
+* Composable behaviors
+* Clear execution chain
+* Support short circuiting
+
+Include:
+
+* LoggingBehavior
+* ValidationBehavior
+* PerformanceBehavior
+
+---
+
+### 4. Mapture Mapping Integration
+
+Integrate Mapture as the default mapper.
+
+Provide extension:
+
+```csharp
+MapTo<TDestination>()
+```
+
+Requirements:
+
+* Zero configuration
+* Lightweight
+* No hidden runtime cost
+* Graceful failure handling
+
+---
+
+### 5. Boilerplate Reduction
+
+Provide base abstractions like:
+
+MappedHandler<TRequest, TEntity, TResponse>
+
+Purpose:
+
+* Reduce repetitive mapping code
+* Encourage clean architecture patterns
+
+---
+
+### 6. Dependency Injection
+
+Provide:
+
+```csharp
+services.AddFluxorq()
+```
+
+Features:
+
+* Assembly scanning for handlers
+* Register dispatcher
+* Register pipeline behaviors
+* Allow customization
+
+---
+
+### 7. Performance
+
+* Minimize allocations
+* Use generics effectively
+* Cache delegates
+* Avoid unnecessary reflection
+
+---
+
+### 8. Observability
+
+Design extensibility for:
+
+* Logging
+* Metrics
+* Tracing
+
+Keep implementation decoupled.
+
+---
+
+### 9. Project Structure
+
+Fluxorq/
+
+* Abstractions/
+* Core/
+* Pipeline/
+* Mapping/
+* DependencyInjection/
+* Samples/
+* Benchmarks/
+* Tests/
+
+---
+
+### 10. Testing
+
+* Unit tests for all core components
+* Pipeline execution tests
+* Mapping tests
+* Integration tests with DI
+
+---
+
+### 11. Documentation
+
+Create:
+
+* README.md
+* Migration guide from MediatR
+* Guide to replacing AutoMapper
+* Usage examples
+
+---
+
+## Non Functional Expectations
+
+* Production ready quality
+* No shortcuts or placeholders
+* Buildable with latest .NET version
+* Suitable for enterprise adoption
+
+---
+
+## Output Requirements
+
+* Fully working solution
+* Clean, modular codebase
+* Well documented
+* Ready for publishing as a NuGet package
+
+---
+
+Act with the discipline of maintaining a widely adopted open source library.
+
+Prioritize correctness, clarity, and legal safety over cleverness.

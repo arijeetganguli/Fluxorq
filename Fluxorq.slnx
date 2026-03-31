@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/benchmarks/">
+    <Project Path="benchmarks/Fluxorq.Benchmarks/Fluxorq.Benchmarks.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/Fluxorq.Sample/Fluxorq.Sample.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Fluxorq/Fluxorq.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Fluxorq.Tests/Fluxorq.Tests.csproj" />
+  </Folder>
+</Solution>
