@@ -14,6 +14,7 @@
     <PackageTags>mediator dispatcher pipeline cqrs mapping dto</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/arijeetganguli/Fluxorq</RepositoryUrl>
     <PackageProjectUrl>https://github.com/arijeetganguli/Fluxorq</PackageProjectUrl>
@@ -26,6 +27,7 @@
   <!-- README.md lives at the repo root, two levels above the csproj -->
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\assets\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
